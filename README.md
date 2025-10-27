@@ -7,40 +7,58 @@
 ---
 
 ## 📖 Overview
-The **Smart Modular Vehicle Monitoring System (SMVMS)** is an intelligent vehicle monitoring and analytics platform that integrates **OBD-II data**, **multiple sensors**, and **AI-driven analysis** to enhance vehicle safety, efficiency, and sustainability.  
+The **Smart Modular Vehicle Monitoring System (SMVMS)** is a next-generation vehicle intelligence platform integrating **OBD-II data**, **acoustic, motion, environmental, and emission sensors**, **driver behavior analysis**, and **digital twin simulation** to enhance vehicle safety, efficiency, and sustainability.  
 
-This project aims to modernize the way vehicle diagnostics and driving analytics are performed by combining IoT-based data collection with cloud computing and AI models. The modular design allows the system to be easily extended with new sensors or features without major reconfiguration.
+This system combines multiple IoT and AI modules into a modular platform that provides **real-time diagnostics, predictive analytics, eco-driving optimization**, and **driver safety monitoring**. Each module is designed to function independently, allowing for easy upgrades and extension.
 
 ---
 
-## ⚙️ Core Features
+## ⚙️ Project Components
 
-- **📡 OBD-II Data Integration:**  
-  Captures real-time engine and vehicle parameters such as RPM, temperature, and fuel efficiency.
+### 1️⃣ Integrated Acoustic Intelligence and Vehicle Security Analytics System (IAVSAS)  
+**Member:** Perera G.S.M (IT22335432)  
 
-- **🌡️ Multi-Sensor Module:**  
-  Integrates **thermal**, **ultrasonic**, and **microphone** sensors to detect overheating, obstacles, and abnormal sounds.
+- Detects engine faults using sound signatures and AI analysis.  
+- Monitors vehicle security while parked using motion sensors.  
+- Provides emergency alerts for drivers or passengers in critical situations.  
+- Integrates acoustic signal processing, machine learning, IoT sensors, and emergency communication modules in a single edge-device platform.  
 
-- **👤 Driver Recognition:**  
-  Uses a camera module for facial recognition to identify the driver and create personalized driving profiles.
+---
 
-- **☁️ Cloud Data Storage:**  
-  Uploads real-time data to a secure cloud platform for storage, visualization, and analytics.
+### 2️⃣ Driver Emotion & Behavior Recognition for Intelligent Safety Assistance  
+**Member:** Basnayake B.M.R.V.V (IT22348616)  
 
-- **🧠 AI & ML Analytics:**  
-  Analyzes driver behavior and predicts potential issues, offering eco-driving recommendations and vehicle health predictions.
+- AI-based system that analyzes facial expressions and driving behavior to detect unsafe emotional and physical states in real-time.  
+- Uses in-cabin camera and vehicle data interface (OBD-II) or sensors to capture behavioral indicators such as hard braking, rapid acceleration, and phone usage while driving.  
+- Sends instant alerts via visual/audio notifications or messages to a connected app when risky conditions (fatigue, distraction, aggressive driving) are detected.  
 
-- **🔧 Modular Design:**  
-  Each hardware and software module functions independently, ensuring easy upgrades and scalability.
+---
+
+### 3️⃣ Green Driving Optimization using AI  
+**Member:** Gurusinghe W.S.H (IT22923042)  
+
+- “Eco-Driving Assistant using Real-Time Data and ML” predicts fuel-efficient driving patterns using OBD-II data and AI.  
+- Provides feedback on speed, acceleration, and driving habits to reduce fuel consumption and emissions.  
+- Integrates a sensor to monitor **exhaust air quality**, providing **real-time emission reports**, predictions, and **daily summary reports** for the driver.  
+- Focuses on sustainable vehicle monitoring with predictive modeling and reinforcement learning for continuous improvement.  
+
+---
+
+### 4️⃣ Digital Twin for Vehicle Health Prediction  
+**Member:** Hansamali A.C (IT22343970)  
+
+- “Vehicle Digital Twin for Real-time Fault Simulation” creates a virtual representation of the vehicle to mirror its real-time condition.  
+- Uses past OBD data and ML to simulate engine performance and predict faults before they occur.  
+- Enables predictive maintenance and advanced IoT analytics through real-time synchronization and simulation.  
 
 ---
 
 ## 🧩 System Architecture
 
 ```
-[OBD-II]      [Thermal]      [Ultrasonic]      [Microphone]      [Camera]
-    │               │               │               │               │
-    └──────────────→ [Raspberry Pi Processing Unit] ────────────────┘
+[OBD-II]      [Thermal]      [Ultrasonic]      [Microphone]      [Camera]      [Exhaust Air Quality]
+    │               │               │               │               │                   │
+    └──────────────→ [Raspberry Pi Processing Unit] ───────────────────────────────────┘
                               │
                         [Cloud Database + API]
                               │
@@ -53,7 +71,7 @@ This project aims to modernize the way vehicle diagnostics and driving analytics
 
 | Component | Technology |
 |------------|-------------|
-| **Hardware** | Raspberry Pi, OBD-II Adapter, Thermal / Ultrasonic / Microphone / Camera Sensors |
+| **Hardware** | Raspberry Pi, OBD-II Adapter, Thermal / Ultrasonic / Microphone / Camera / Exhaust Air Quality Sensors |
 | **Backend** | Python (Flask / FastAPI) or Node.js |
 | **Database** | Firebase / MongoDB / PostgreSQL |
 | **Frontend** | React.js / Android (Kotlin) |
